@@ -52,7 +52,7 @@ const desktopIcons: DesktopIcon[] = [
     label: 'All The Birds With One Stone',
     iconSrc: `${BASE_PATH}/images/icons/birds-with-one-stone.png`,
     iconAlt: 'All The Birds With One Stone',
-    openPath: 'https://html-classic.itch.zone/html/10378363/all-the-birds-with-one-stone/bird.html?=0',
+    openPath: 'https://autopoies.is/all-the-birds-with-one-stone/',
     x: ICON_SPACING * 2,
     y: 0,
   },
@@ -144,8 +144,8 @@ function DesktopContent() {
       'all-the-birds-with-one-stone': {
         id: 'all-the-birds-with-one-stone',
         title: 'All The Birds With One Stone',
-        x: 0,
-        y: 0,
+        x: 200,
+        y: 50,
         width: 1000,
         height: 700,
         isVisible: true,
@@ -214,25 +214,7 @@ function DesktopContent() {
                 />
               }
               onClick={() => {
-                if (icon.id === 'all-the-birds-with-one-stone') {
-
-                  const width = 100;
-                  const height = 180;
-                  const left = Math.floor((window.screen.width - width) / 2);
-                  const top = Math.floor(window.screen.height - height);
-
-                  window.open(
-                    icon.openPath,
-                    'birdWindow' + Date.now(),
-                    `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
-                  );
-                } else {
-                  handleOpenWindow(icon.id);
-                }
-                // else {
-                //   // Other games open externally in new tab
-                //   window.open(icon.openPath, '_blank');
-                // }
+                handleOpenWindow(icon.id);
               }}
               x={icon.x}
               y={icon.y}
@@ -259,6 +241,7 @@ function DesktopContent() {
           {window.id === 'cement' && <CementWindow windowId={window.id} />}
           {window.id === 'auto-battle-knights' && <AutoBattleKnightsWindow windowId={window.id} />}
           {window.id === 'reversed-queen' && <ReversedQueenOfWandsWindow windowId={window.id} />}
+          {window.id === 'all-the-birds-with-one-stone' && <AllTheBirdsWithOneStoneWindow windowId={window.id} />}
         </Window>
       ))}
 

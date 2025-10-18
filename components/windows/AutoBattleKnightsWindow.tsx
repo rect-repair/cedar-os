@@ -19,6 +19,7 @@ export default function AutoBattleKnightsWindow({ windowId }: AutoBattleKnightsW
                 <div className="bg-custom-body border-b-4 border-b-custom-border p-3 text-center flex-shrink-0">
                     <h2 className="text-2xl text-custom-green underline"><a href="https://irene-li.itch.io/auto-battle-knights" target="_blank" rel="noopener noreferrer" className="hover:text-custom-body hover:bg-custom-green">Auto Battle Knights</a></h2>
                     <p className="text-lg">by Irene Li • Web • Arcade</p>
+                    <p className="text-lg"> 本游戏需要🪜连接 googlesheet，留言时请保持友好和文明。如果无法连接请告知 @修四边形</p>
                 </div>
             )}
 
