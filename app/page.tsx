@@ -214,7 +214,16 @@ function DesktopContent() {
                 />
               }
               onClick={() => {
-                handleOpenWindow(icon.id);
+                if (icon.id === 'auto-battle-knights') {
+
+                  window.open(
+                    'https://irene-li.itch.io/auto-battle-knights',
+                    'auto-battle-knights' + Date.now(),
+                    'width=1000,height=700,resizable=yes,scrollbars=yes'
+                  );
+                } else {
+                  handleOpenWindow(icon.id);
+                }
               }}
               x={icon.x}
               y={icon.y}
